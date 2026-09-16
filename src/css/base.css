@@ -1,0 +1,45 @@
+:root {
+	--poke-red: #d82f3a;
+	--poke-red-dark: #b9232d;
+	--ink: #171717;
+	--ink-soft: #363636;
+	--surface: #fffdf8;
+	--surface-2: #f6f4ef;
+	--line: #d5d0c6;
+	--focus: #2b7cff;
+	--success: #177f4d;
+	--warning: #9a6600;
+	--danger: #b22028;
+	--shadow-lg: 0 14px 38px rgba(13, 13, 13, 0.24);
+	--shadow-md: 0 8px 24px rgba(13, 13, 13, 0.16);
+	--radius-lg: 18px;
+	--radius-md: 12px;
+	--radius-sm: 8px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: "Trebuchet MS", "Segoe UI", Tahoma, sans-serif;
+	color: var(--ink);
+	background:
+		radial-gradient(circle at 50% 51%, transparent 0 55px, #000 55px 62px, transparent 62px),
+		radial-gradient(circle at 50% 51%, #fff 0 55px, transparent 56px),
+		linear-gradient(180deg, var(--poke-red) 0 50%, #000 50% 52%, #f3efe6 52% 100%);
+	min-height: 100vh;
+}
+
+h1,
+h2,
+p {
+	margin-top: 0;
+}
+
+h1 {
+	font-size: clamp(1.8rem, 4vw, 2.6rem);
+	letter-spacing: 0.02em;
+	margin-bottom: 0.8rem;
+}
