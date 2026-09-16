@@ -1,4 +1,11 @@
 :root {
+	--primary: #6e4a8e;
+	--secondary: #a78bc2;
+	--highlight: #d9a441;
+	--background: #f6f2f7;
+	--text: #000000;
+	--primary-dark: #51356b;
+	--secondary-light: #eee7f2;
 	font-family: Georgia, "Times New Roman", serif;
 	line-height: 1.6;
 	font-weight: 400;
@@ -18,6 +25,8 @@ body {
 	margin: 0;
 	min-width: 320px;
 	font-size: 1rem;
+	color: var(--text);
+	background: var(--background);
 }
 
 a {
@@ -31,7 +40,9 @@ button:focus-visible {
 }
 
 .site-header {
-	border-bottom: 1px solid currentColor;
+	background: var(--primary);
+	color: #ffffff;
+	border-bottom: 4px solid var(--highlight);
 }
 
 .site-nav {
@@ -67,6 +78,17 @@ button:focus-visible {
 	text-underline-offset: 0.2em;
 }
 
+.nav-links a:hover,
+.contact-links a:hover,
+.text-link:hover {
+	color: var(--primary);
+}
+
+.site-header .nav-links a:hover,
+.site-header .nav-links a:focus-visible {
+	color: var(--highlight);
+}
+
 main {
 	width: min(1120px, calc(100% - 3rem));
 	margin: 0 auto;
@@ -100,6 +122,7 @@ main {
 
 .eyebrow,
 .project-status {
+	color: var(--primary);
 	margin: 0 0 0.8rem;
 	font-size: 0.8rem;
 	font-weight: 700;
@@ -120,9 +143,16 @@ main {
 .button {
 	display: inline-block;
 	padding: 0.8rem 1.1rem;
-	border: 2px solid currentColor;
+	border: 2px solid var(--primary);
+	background: var(--primary);
+	color: #ffffff;
 	font-weight: 700;
 	text-decoration: none;
+}
+
+.button:hover {
+	background: var(--primary-dark);
+	border-color: var(--primary-dark);
 }
 
 .text-link {
@@ -133,7 +163,7 @@ main {
 .content-section,
 .featured-project {
 	padding: 5rem 0;
-	border-top: 1px solid currentColor;
+	border-top: 1px solid var(--secondary);
 }
 
 .content-section h2,
@@ -153,6 +183,7 @@ main {
 	grid-template-columns: minmax(0, 1fr) auto;
 	align-items: end;
 	gap: 3rem;
+	border-bottom: 1px solid var(--secondary);
 }
 
 .featured-project > div:first-child {
@@ -180,7 +211,8 @@ main {
 	flex-direction: column;
 	min-height: 360px;
 	padding: 1.5rem;
-	border: 1px solid currentColor;
+	border: 1px solid var(--secondary);
+	background: var(--secondary-light);
 }
 
 .project-card:first-child {
@@ -209,7 +241,8 @@ main {
 
 .project-tags li {
 	padding: 0.3rem 0.55rem;
-	border: 1px solid currentColor;
+	border: 1px solid var(--highlight);
+	background: #fffaf0;
 	font-size: 0.85rem;
 }
 
@@ -233,7 +266,9 @@ main {
 	width: min(1120px, calc(100% - 3rem));
 	margin: 0 auto;
 	padding: 1.5rem 0 3rem;
-	border-top: 1px solid currentColor;
+	border-top: 4px solid var(--highlight);
+	background: var(--primary);
+	color: #ffffff;
 }
 
 .site-footer p {
